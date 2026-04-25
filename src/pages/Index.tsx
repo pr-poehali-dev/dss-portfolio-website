@@ -6,8 +6,7 @@ const NAV_ITEMS = [
   { id: 'about', label: '02 / О себе' },
   { id: 'portfolio', label: '03 / Портфолио' },
   { id: 'skills', label: '04 / Стек' },
-  { id: 'articles', label: '05 / Статьи' },
-  { id: 'contact', label: '06 / Контакт' },
+  { id: 'contact', label: '05 / Контакт' },
 ];
 
 const SKILLS = [
@@ -37,7 +36,7 @@ const PROJECTS = [
     num: '002',
     title: 'CryptoVault API',
     desc: 'Высоконагруженный сервис для криптовалютных транзакций с обработкой 50k+ запросов/сек',
-    tags: ['Python', 'FastAPI', 'Redis', 'Docker'],
+    tags: ['Node.js', 'FastAPI', 'Redis', 'Docker'],
     year: '2024',
   },
   {
@@ -50,37 +49,16 @@ const PROJECTS = [
   {
     num: '004',
     title: 'Pulse Analytics',
-    desc: 'ML-платформа для предиктивной аналитики пользовательского поведения',
-    tags: ['Python', 'TensorFlow', 'React', 'Kubernetes'],
+    desc: 'Платформа для предиктивной аналитики пользовательского поведения',
+    tags: ['Node.js', 'React', 'PostgreSQL', 'Kubernetes'],
     year: '2023',
-  },
-];
-
-const ARTICLES = [
-  {
-    date: '12 APR 2025',
-    title: 'Архитектура микрофронтендов: когда это оправдано',
-    desc: 'Разбираю случаи, когда микрофронтенды решают проблемы, а не создают новые',
-    tag: 'Architecture',
-  },
-  {
-    date: '01 MAR 2025',
-    title: 'WebAssembly в production: реальный опыт',
-    desc: 'Как мы ускорили обработку изображений в браузере в 12 раз с помощью WASM',
-    tag: 'Performance',
-  },
-  {
-    date: '18 JAN 2025',
-    title: 'PostgreSQL под нагрузкой: оптимизация запросов',
-    desc: 'Практические паттерны для работы с большими таблицами и сложными join-ами',
-    tag: 'Database',
   },
 ];
 
 const CONTACTS = [
   { icon: 'Mail', label: 'Email', value: 'dss2284856@yandex.ru', href: 'mailto:dss2284856@yandex.ru' },
   { icon: 'Github', label: 'GitHub', value: 'github.com/NochboolPrime', href: 'https://github.com/NochboolPrime' },
-  { icon: 'Users', label: 'ВКонтакте', value: 'vk.com/daniilshishkin_np', href: 'https://vk.com/daniilshishkin_np' },
+  { icon: 'Users', label: 'VKontakte', value: 'vk.com/daniilshishkin_np', href: 'https://vk.com/daniilshishkin_np' },
   { icon: 'MessageCircle', label: 'Telegram', value: '@DaniilShishkinNPmk2', href: 'https://t.me/DaniilShishkinNPmk2' },
 ];
 
@@ -158,9 +136,10 @@ export default function Index() {
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-12 py-5"
         style={{ background: 'linear-gradient(to bottom, rgba(7,12,20,0.95), transparent)' }}>
         <button onClick={() => scrollTo('hero')}
-          className="font-orbitron font-black text-lg tracking-widest"
-          style={{ color: 'var(--cyan)', textShadow: '0 0 20px var(--cyan)' }}>
-          DSS
+          className="font-orbitron font-black text-lg tracking-widest flex gap-0.5">
+          <span style={{ color: '#3b82f6', textShadow: '0 0 12px rgba(59,130,246,0.5)' }}>D</span>
+          <span style={{ color: '#dc2626', textShadow: '0 0 12px rgba(220,38,38,0.5)' }}>S</span>
+          <span style={{ color: '#3b82f6', textShadow: '0 0 12px rgba(59,130,246,0.5)' }}>S</span>
         </button>
         <div className="hidden md:flex items-center gap-8">
           {NAV_ITEMS.map((item) => (
@@ -187,7 +166,7 @@ export default function Index() {
         </div>
       )}
 
-      {/* ─── HERO ─── */}
+      {/* HERO */}
       <section id="hero" className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden grid-bg">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full opacity-8 blur-3xl"
@@ -241,7 +220,9 @@ export default function Index() {
             data-text="Строю продукты от идеи до production">
             Строю продукты от идеи до production
           </h1>
-          <div className="mt-3 font-mono text-xs text-white/30 type-cursor">5+ лет в разработке · React · NodeJS · PostgreSQL</div>
+          <div className="mt-3 font-mono text-xs text-white/30 type-cursor">
+            5+ лет в разработке · React · Node.js · PostgreSQL
+          </div>
         </div>
 
         <div className="relative mt-10 flex flex-col sm:flex-row gap-4" style={{ zIndex: 1 }}>
@@ -249,20 +230,20 @@ export default function Index() {
             Смотреть работы
           </button>
           <button className="neon-btn" onClick={() => scrollTo('contact')}
-            style={{ borderColor: 'rgba(123,47,255,0.6)', color: '#b794ff' }}>
+            style={{ borderColor: 'rgba(220,38,38,0.6)', color: '#f87171' }}>
             Написать
           </button>
         </div>
 
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40">
           <div className="font-mono text-xs tracking-widest">SCROLL</div>
-          <div className="w-px h-10 relative overflow-hidden" style={{ background: 'rgba(0,229,255,0.2)' }}>
+          <div className="w-px h-10 relative overflow-hidden" style={{ background: 'rgba(59,130,246,0.2)' }}>
             <div className="scan-line" style={{ animationDuration: '2s' }} />
           </div>
         </div>
       </section>
 
-      {/* ─── ABOUT ─── */}
+      {/* ABOUT */}
       <section id="about" className="relative py-32 px-6 md:px-20 max-w-6xl mx-auto">
         <div className="scan-line" />
         <div className="reveal grid md:grid-cols-2 gap-16 items-center">
@@ -294,28 +275,29 @@ export default function Index() {
             <div className="relative w-72 h-72 mx-auto">
               <div className="absolute inset-0"
                 style={{
-                  background: 'linear-gradient(135deg, rgba(0,229,255,0.08), rgba(123,47,255,0.08))',
-                  border: '1px solid rgba(0,229,255,0.2)',
+                  background: 'linear-gradient(135deg, rgba(59,130,246,0.08), rgba(220,38,38,0.08))',
+                  border: '1px solid rgba(59,130,246,0.2)',
                   clipPath: 'polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%)',
                 }} />
               <div className="absolute inset-4 flex items-center justify-center"
                 style={{
                   clipPath: 'polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%)',
-                  background: 'rgba(0,229,255,0.03)',
+                  background: 'rgba(59,130,246,0.03)',
                 }}>
                 <div className="text-center">
-                  <div className="font-orbitron font-black text-6xl"
-                    style={{ color: 'var(--cyan)', textShadow: '0 0 40px var(--cyan)' }}>
-                    DSS
+                  <div className="font-orbitron font-black text-6xl flex gap-0.5 justify-center">
+                    <span style={{ color: '#3b82f6', textShadow: '0 0 20px rgba(59,130,246,0.5)' }}>D</span>
+                    <span style={{ color: '#dc2626', textShadow: '0 0 20px rgba(220,38,38,0.5)' }}>S</span>
+                    <span style={{ color: '#3b82f6', textShadow: '0 0 20px rgba(59,130,246,0.5)' }}>S</span>
                   </div>
                   <div className="font-mono text-xs text-white/30 mt-2 tracking-widest">FULLSTACK</div>
                 </div>
               </div>
-              {[0, 60, 120, 180, 240, 300].map((deg) => (
+              {[0, 60, 120, 180, 240, 300].map((deg, idx) => (
                 <div key={deg} className="absolute w-2 h-2 rounded-full"
                   style={{
-                    background: 'var(--cyan)',
-                    boxShadow: '0 0 8px var(--cyan)',
+                    background: idx % 2 === 0 ? '#3b82f6' : '#dc2626',
+                    boxShadow: idx % 2 === 0 ? '0 0 8px #3b82f6' : '0 0 8px #dc2626',
                     top: `${50 - 46 * Math.cos(deg * Math.PI / 180)}%`,
                     left: `${50 + 46 * Math.sin(deg * Math.PI / 180)}%`,
                     transform: 'translate(-50%,-50%)',
@@ -340,7 +322,7 @@ export default function Index() {
         </div>
       </section>
 
-      {/* ─── PORTFOLIO ─── */}
+      {/* PORTFOLIO */}
       <section id="portfolio" className="relative py-32 px-6 md:px-20 max-w-6xl mx-auto">
         <div className="reveal mb-16">
           <div className="section-num">03</div>
@@ -367,9 +349,9 @@ export default function Index() {
                 {project.tags.map((tag) => (
                   <span key={tag} className="font-mono text-xs px-3 py-1"
                     style={{
-                      border: '1px solid rgba(0,229,255,0.2)',
-                      color: 'rgba(0,229,255,0.7)',
-                      background: 'rgba(0,229,255,0.04)',
+                      border: '1px solid rgba(59,130,246,0.2)',
+                      color: 'rgba(59,130,246,0.7)',
+                      background: 'rgba(59,130,246,0.04)',
                     }}>
                     {tag}
                   </span>
@@ -384,7 +366,7 @@ export default function Index() {
         </div>
       </section>
 
-      {/* ─── SKILLS ─── */}
+      {/* SKILLS */}
       <section id="skills" className="relative py-32 px-6 md:px-20 max-w-6xl mx-auto">
         <div className="reveal mb-16">
           <div className="section-num">04</div>
@@ -430,9 +412,9 @@ export default function Index() {
             {['Redis', 'GraphQL', 'AWS', 'Nginx', 'Git', 'CI/CD', 'Vercel', 'REST API'].map((tech) => (
               <span key={tech} className="font-mono text-xs px-4 py-2"
                 style={{
-                  border: '1px solid rgba(123,47,255,0.25)',
-                  color: 'rgba(183,134,255,0.7)',
-                  background: 'rgba(123,47,255,0.04)',
+                  border: '1px solid rgba(220,38,38,0.25)',
+                  color: 'rgba(248,113,113,0.7)',
+                  background: 'rgba(220,38,38,0.04)',
                 }}>
                 {tech}
               </span>
@@ -441,43 +423,10 @@ export default function Index() {
         </div>
       </section>
 
-      {/* ─── ARTICLES ─── */}
-      <section id="articles" className="relative py-32 px-6 md:px-20 max-w-6xl mx-auto">
-        <div className="reveal mb-16">
-          <div className="section-num">05</div>
-          <div className="section-label -mt-4 mb-2">Публикации</div>
-          <h2 className="font-orbitron font-bold text-3xl md:text-4xl text-white">
-            Статьи и<br />
-            <span style={{ color: 'var(--cyan)' }}>мысли</span>
-          </h2>
-        </div>
-        <div className="space-y-10 max-w-3xl">
-          {ARTICLES.map((article, i) => (
-            <div key={i} className="reveal article-card" style={{ transitionDelay: `${i * 0.15}s` }}>
-              <div className="flex items-center gap-4 mb-3">
-                <span className="font-mono text-xs text-white/30">{article.date}</span>
-                <span className="font-mono text-xs px-2 py-0.5"
-                  style={{ border: '1px solid rgba(0,229,255,0.2)', color: 'rgba(0,229,255,0.6)' }}>
-                  {article.tag}
-                </span>
-              </div>
-              <h3 className="font-ibm font-medium text-lg text-white mb-2 hover:text-cyan-400 transition-colors cursor-pointer">
-                {article.title}
-              </h3>
-              <p className="font-ibm text-sm text-white/40 leading-relaxed">{article.desc}</p>
-              <div className="mt-4 flex items-center gap-2 text-white/25 hover:text-cyan-400 transition-colors cursor-pointer">
-                <span className="font-mono text-xs tracking-widest">ЧИТАТЬ</span>
-                <Icon name="ArrowRight" size={12} />
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ─── CONTACT ─── */}
+      {/* CONTACT */}
       <section id="contact" className="relative py-32 px-6 md:px-20 max-w-6xl mx-auto">
         <div className="reveal mb-16">
-          <div className="section-num">06</div>
+          <div className="section-num">05</div>
           <div className="section-label -mt-4 mb-2">Контакт</div>
           <h2 className="font-orbitron font-bold text-3xl md:text-4xl text-white">
             Начнём<br />
@@ -494,8 +443,8 @@ export default function Index() {
               <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center"
                 style={{
                   clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
-                  background: 'rgba(0,229,255,0.06)',
-                  border: '1px solid rgba(0,229,255,0.15)',
+                  background: 'rgba(59,130,246,0.06)',
+                  border: '1px solid rgba(59,130,246,0.15)',
                 }}>
                 <Icon name={contact.icon as Parameters<typeof Icon>[0]['name']} size={16} className="text-cyan-400" />
               </div>
@@ -509,12 +458,13 @@ export default function Index() {
         </div>
 
         <div className="mt-32 pt-8 border-t border-white/5 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-          <div className="font-orbitron font-black text-2xl tracking-wider"
-            style={{ color: 'var(--cyan)', textShadow: '0 0 20px var(--cyan)' }}>
-            DSS
+          <div className="font-orbitron font-black text-2xl tracking-wider flex gap-0.5">
+            <span style={{ color: '#3b82f6', textShadow: '0 0 12px rgba(59,130,246,0.5)' }}>D</span>
+            <span style={{ color: '#dc2626', textShadow: '0 0 12px rgba(220,38,38,0.5)' }}>S</span>
+            <span style={{ color: '#3b82f6', textShadow: '0 0 12px rgba(59,130,246,0.5)' }}>S</span>
           </div>
           <div className="font-mono text-xs text-white/20 tracking-widest">
-            DANIIL SERGEEVICH SHISHKIN · FULLSTACK DEVELOPER · 2025
+            DANIIL SERGEEVICH SHISHKIN · FULLSTACK DEVELOPER · 2026
           </div>
         </div>
       </section>
