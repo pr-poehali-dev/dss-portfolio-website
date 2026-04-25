@@ -241,9 +241,7 @@ export default function Index() {
             data-text="Строю продукты от идеи до production">
             Строю продукты от идеи до production
           </h1>
-          <div className="mt-3 font-mono text-xs text-white/30 type-cursor">
-            5+ лет в разработке&nbsp;·&nbsp;React&nbsp;·&nbsp;Python&nbsp;·&nbsp;PostgreSQL
-          </div>
+          <div className="mt-3 font-mono text-xs text-white/30 type-cursor">5+ лет в разработке · React · NodeJS · PostgreSQL</div>
         </div>
 
         <div className="relative mt-10 flex flex-col sm:flex-row gap-4" style={{ zIndex: 1 }}>
