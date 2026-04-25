@@ -34,11 +34,11 @@
 
     --radius: 0.25rem;
 
-    --cyan: #00e5ff;
-    --cyan-dim: rgba(0, 229, 255, 0.15);
-    --cyan-glow: rgba(0, 229, 255, 0.4);
-    --electric: #7b2fff;
-    --electric-dim: rgba(123, 47, 255, 0.15);
+    --cyan: #3b82f6;
+    --cyan-dim: rgba(59, 130, 246, 0.15);
+    --cyan-glow: rgba(59, 130, 246, 0.35);
+    --electric: #dc2626;
+    --electric-dim: rgba(220, 38, 38, 0.15);
   }
 }
 
@@ -102,8 +102,8 @@ body::before {
     0deg,
     transparent,
     transparent 2px,
-    rgba(0, 229, 255, 0.012) 2px,
-    rgba(0, 229, 255, 0.012) 4px
+    rgba(59, 130, 246, 0.008) 2px,
+    rgba(59, 130, 246, 0.008) 4px
   );
   pointer-events: none;
   z-index: 1000;
@@ -112,8 +112,8 @@ body::before {
 /* Grid background */
 .grid-bg {
   background-image:
-    linear-gradient(rgba(0, 229, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 229, 255, 0.04) 1px, transparent 1px);
+    linear-gradient(rgba(59, 130, 246, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.04) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 
@@ -130,11 +130,10 @@ body::before {
   font-size: clamp(100px, 20vw, 220px);
   line-height: 0.9;
   color: transparent;
-  -webkit-text-stroke: 2px var(--cyan);
+  -webkit-text-stroke: 2px #3b82f6;
   text-shadow:
-    0 0 30px var(--cyan),
-    0 0 60px var(--cyan-glow),
-    0 0 120px rgba(0, 229, 255, 0.2);
+    0 0 15px rgba(59, 130, 246, 0.5),
+    0 0 35px rgba(59, 130, 246, 0.2);
   position: relative;
   transform-style: preserve-3d;
   animation: letter-float 6s ease-in-out infinite;
@@ -142,18 +141,25 @@ body::before {
 
 .dss-letter:nth-child(1) {
   animation-delay: 0s;
+  -webkit-text-stroke-color: #3b82f6;
+  text-shadow:
+    0 0 15px rgba(59, 130, 246, 0.5),
+    0 0 35px rgba(59, 130, 246, 0.2);
 }
 .dss-letter:nth-child(2) {
   animation-delay: 0.3s;
-  color: var(--electric);
-  -webkit-text-stroke-color: #7b2fff;
+  color: transparent;
+  -webkit-text-stroke: 2px #dc2626;
   text-shadow:
-    0 0 30px #7b2fff,
-    0 0 60px rgba(123, 47, 255, 0.4),
-    0 0 120px rgba(123, 47, 255, 0.2);
+    0 0 15px rgba(220, 38, 38, 0.5),
+    0 0 35px rgba(220, 38, 38, 0.2);
 }
 .dss-letter:nth-child(3) {
   animation-delay: 0.6s;
+  -webkit-text-stroke-color: #3b82f6;
+  text-shadow:
+    0 0 15px rgba(59, 130, 246, 0.5),
+    0 0 35px rgba(59, 130, 246, 0.2);
 }
 
 .dss-letter::before {
@@ -213,22 +219,22 @@ body::before {
 .orbit-ring-1 {
   animation: orbit1 8s linear infinite;
   border-color: transparent;
-  border-top-color: rgba(0, 229, 255, 0.6);
-  border-bottom-color: rgba(0, 229, 255, 0.2);
+  border-top-color: rgba(59, 130, 246, 0.5);
+  border-bottom-color: rgba(59, 130, 246, 0.15);
 }
 .orbit-ring-2 {
   inset: 20px;
   animation: orbit2 12s linear infinite;
   border-color: transparent;
-  border-left-color: rgba(123, 47, 255, 0.5);
-  border-right-color: rgba(123, 47, 255, 0.2);
+  border-left-color: rgba(220, 38, 38, 0.4);
+  border-right-color: rgba(220, 38, 38, 0.15);
 }
 .orbit-ring-3 {
   inset: 40px;
   animation: orbit3 6s linear infinite;
   border-color: transparent;
-  border-top-color: rgba(0, 229, 255, 0.3);
-  border-bottom-color: rgba(123, 47, 255, 0.3);
+  border-top-color: rgba(59, 130, 246, 0.25);
+  border-bottom-color: rgba(220, 38, 38, 0.25);
 }
 
 @keyframes orbit1 {

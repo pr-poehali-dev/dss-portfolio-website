@@ -56,8 +56,8 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				cyan: '#00e5ff',
-				electric: '#7b2fff',
+				cyan: '#3b82f6',
+				electric: '#dc2626',
 			},
 			keyframes: {
 				'accordion-down': {

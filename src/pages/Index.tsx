@@ -19,9 +19,9 @@ const SKILLS = [
   ]},
   { group: 'Backend', items: [
     { name: 'Node.js / Express', level: 92 },
-    { name: 'Python / FastAPI', level: 85 },
+    { name: 'PHP / Laravel', level: 85 },
     { name: 'PostgreSQL', level: 88 },
-    { name: 'Docker / K8s', level: 78 },
+    { name: 'Vercel / Deployment', level: 80 },
   ]},
 ];
 
@@ -78,10 +78,10 @@ const ARTICLES = [
 ];
 
 const CONTACTS = [
-  { icon: 'Mail', label: 'Email', value: 'dss@example.com', href: 'mailto:dss@example.com' },
-  { icon: 'Github', label: 'GitHub', value: 'github.com/dss-dev', href: '#' },
-  { icon: 'Linkedin', label: 'LinkedIn', value: 'linkedin.com/in/dshishkin', href: '#' },
-  { icon: 'MessageCircle', label: 'Telegram', value: '@dss_dev', href: '#' },
+  { icon: 'Mail', label: 'Email', value: 'dss2284856@yandex.ru', href: 'mailto:dss2284856@yandex.ru' },
+  { icon: 'Github', label: 'GitHub', value: 'github.com/NochboolPrime', href: 'https://github.com/NochboolPrime' },
+  { icon: 'Users', label: 'ВКонтакте', value: 'vk.com/daniilshishkin_np', href: 'https://vk.com/daniilshishkin_np' },
+  { icon: 'MessageCircle', label: 'Telegram', value: '@DaniilShishkinNPmk2', href: 'https://t.me/DaniilShishkinNPmk2' },
 ];
 
 const PARTICLES = Array.from({ length: 20 }, (_, i) => ({
@@ -89,7 +89,7 @@ const PARTICLES = Array.from({ length: 20 }, (_, i) => ({
   left: `${Math.random() * 100}%`,
   duration: `${3 + Math.random() * 6}s`,
   delay: `${Math.random() * 4}s`,
-  color: i % 3 === 0 ? '#7b2fff' : '#00e5ff',
+  color: i % 3 === 0 ? '#dc2626' : '#3b82f6',
 }));
 
 export default function Index() {
@@ -190,10 +190,10 @@ export default function Index() {
       {/* ─── HERO ─── */}
       <section id="hero" className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden grid-bg">
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full opacity-10 blur-3xl"
-            style={{ background: 'radial-gradient(circle, #00e5ff, transparent)' }} />
-          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full opacity-10 blur-3xl"
-            style={{ background: 'radial-gradient(circle, #7b2fff, transparent)' }} />
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full opacity-8 blur-3xl"
+            style={{ background: 'radial-gradient(circle, #3b82f6, transparent)' }} />
+          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full opacity-8 blur-3xl"
+            style={{ background: 'radial-gradient(circle, #dc2626, transparent)' }} />
         </div>
 
         {PARTICLES.map((p) => (
@@ -214,7 +214,7 @@ export default function Index() {
                 <div className="orbit-dot" />
               </div>
               <div className="orbit-ring orbit-ring-2 absolute" style={{ inset: '20px' }}>
-                <div className="orbit-dot" style={{ background: '#7b2fff', boxShadow: '0 0 8px #7b2fff' }} />
+                <div className="orbit-dot" style={{ background: '#dc2626', boxShadow: '0 0 8px #dc2626' }} />
               </div>
               <div className="orbit-ring orbit-ring-3 absolute" style={{ inset: '50px' }}>
                 <div className="orbit-dot" />
@@ -429,7 +429,7 @@ export default function Index() {
             Также работаю с
           </div>
           <div className="flex flex-wrap justify-center gap-3">
-            {['Redis', 'GraphQL', 'AWS', 'Nginx', 'Git', 'CI/CD', 'Terraform', 'ElasticSearch'].map((tech) => (
+            {['Redis', 'GraphQL', 'AWS', 'Nginx', 'Git', 'CI/CD', 'Vercel', 'REST API'].map((tech) => (
               <span key={tech} className="font-mono text-xs px-4 py-2"
                 style={{
                   border: '1px solid rgba(123,47,255,0.25)',
