@@ -27,31 +27,35 @@ const SKILLS = [
 const PROJECTS = [
   {
     num: '001',
-    title: 'NexusOS Dashboard',
-    desc: 'Корпоративная платформа управления инфраструктурой с real-time мониторингом и аналитикой',
-    tags: ['React', 'Node.js', 'PostgreSQL', 'WebSocket'],
-    year: '2024',
+    title: 'БилетБус',
+    desc: 'Платформа продажи автобусных билетов онлайн с оплатой, админ-панелью и личными кабинетами водителей',
+    tags: ['React', 'Node.js', 'PostgreSQL', 'Онлайн-оплата'],
+    year: '2025',
+    url: 'https://bitelbustestnew.vercel.app/',
   },
   {
     num: '002',
-    title: 'CryptoVault API',
-    desc: 'Высоконагруженный сервис для криптовалютных транзакций с обработкой 50k+ запросов/сек',
-    tags: ['Node.js', 'FastAPI', 'Redis', 'Docker'],
-    year: '2024',
+    title: 'CinemaVault',
+    desc: 'Онлайн-кинотеатр с интегрированным плеером, админ-панелью для управления фильмами и системой профилей',
+    tags: ['React', 'Video Player', 'Auth', 'Admin Panel'],
+    year: '2025',
+    url: 'https://cinemavaulttest.vercel.app/',
   },
   {
     num: '003',
-    title: 'Orbital CMS',
-    desc: 'Headless CMS нового поколения с визуальным редактором и автоматической оптимизацией контента',
-    tags: ['TypeScript', 'GraphQL', 'MongoDB', 'AWS'],
-    year: '2023',
+    title: 'КРАСНОДАР*БУРГЕР',
+    desc: 'Сайт онлайн-меню с корзиной и оформлением заказа для бургерной',
+    tags: ['React', 'E-commerce', 'Корзина', 'Онлайн-заказ'],
+    year: '2025',
+    url: 'https://learn-digital-skills--preview.poehali.dev/',
   },
   {
     num: '004',
-    title: 'Pulse Analytics',
-    desc: 'Платформа для предиктивной аналитики пользовательского поведения',
-    tags: ['Node.js', 'React', 'PostgreSQL', 'Kubernetes'],
-    year: '2023',
+    title: 'AVAX FITNESS',
+    desc: 'Сайт фитнес-клуба с онлайн-записью на тренировки и расписанием занятий',
+    tags: ['React', 'Booking', 'Расписание', 'Fitness'],
+    year: '2025',
+    url: 'https://mobile-app-development-25--preview.poehali.dev/',
   },
 ];
 
@@ -334,8 +338,11 @@ export default function Index() {
         </div>
         <div className="grid md:grid-cols-2 gap-6">
           {PROJECTS.map((project, i) => (
-            <div key={project.num}
-              className="reveal tech-card corner-tl p-8 group cursor-pointer"
+            <a key={project.num}
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="reveal tech-card corner-tl p-8 group cursor-pointer block no-underline"
               style={{ transitionDelay: `${i * 0.1}s` }}>
               <div className="flex items-start justify-between mb-6">
                 <div className="font-mono text-xs text-white/20">{project.num}</div>
@@ -361,7 +368,7 @@ export default function Index() {
                 <span className="font-mono text-xs tracking-widest">VIEW PROJECT</span>
                 <Icon name="ArrowRight" size={14} />
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </section>
